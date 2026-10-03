@@ -1,83 +1,158 @@
-
 <!doctype html>
 <html lang="ru">
 <head>
 <meta charset="utf-8">
 <title>Иван Волков</title>
 <style>
-  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:800px;margin:2em auto;padding:0 1em;color:#1c2733;line-height:1.5}
+  /* Экспорт — это бумага, и он НЕ зависит от темы интерфейса. Страница намеренно
+   не подключает static/style.css: все цвета объявлены здесь, жёстко и вручную.
+   Поэтому тёмная тема редактора не может сюда просочиться, а правки холста в
+   style.css не заденут опубликованный документ. */
+html { background: #FFFFFF; color-scheme: light; }
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;max-width:800px;margin:2em auto;padding:0 1em;background:#FFFFFF;color:#1c2733;line-height:1.5}
   h1{font-size:26px;margin:0 0 2px} .subtitle{color:#5b6b7b;margin:0 0 16px}
-  .watermark{color:#94a3b8;font-size:11px;text-align:center;letter-spacing:.08em;margin:0 0 8px}
   h2{border-bottom:2px solid #dde1e6;padding-bottom:4px;font-size:17px;margin-top:24px}
   h3{margin:10px 0 2px;font-size:15px} .meta{color:#5b6b7b;font-size:13px;margin:0 0 6px}
-  .desc{white-space:pre-wrap;margin:4px 0} mark{background:#ffe066;padding:0 2px;border-radius:3px}
-  ul{margin:4px 0;padding-left:20px} .score{color:#2563eb;font-size:13px;font-weight:600}
+  .desc{white-space:pre-wrap;margin:4px 0}
+  ul{margin:4px 0;padding-left:20px}
+  /* Навыки — одна строка через разделитель, а не список: длинный перечень
+     занимал полэкрана и рвал вёрстку в столбик по одному слову. */
+  .skills-line{margin:4px 0 0;line-height:1.6}
+  .skills-line .sk{white-space:nowrap}
+  @media print{
+    /* Печатаем без полей разметки редактора — на бумаге они не нужны. */
+    .skills-line{margin:0}
+    ul{padding-left:18px}
+  }
 </style>
 </head>
 <body>
-
 <article class="resume">
-  
-  
   <h1>Иван Волков</h1>
+  
   <p class="subtitle">Системный Аналитик</p>
+  
 
   
-  <section>
+  <section data-section="contacts">
+    
     <h2>Контакты</h2>
 
     
-      <ul>
-        <li>Телефон: +79032079942</li>
-        <li>Email: me4ward@yandex.ru</li>
-        <li>Город: Москва</li>
-        <li>Telegram: @me4ward</li>
+      <ul class="doc-list">
         
+        
+        <li>
+          
+          Телефон: +79032079942
+          
+        </li>
+        
+        
+        
+        <li>
+          
+          Email: me4ward@yandex.ru
+          
+        </li>
+        
+        
+        
+        <li>
+          
+          Город: Москва
+          
+        </li>
+        
+        
+        
+        <li>
+          
+          Telegram: @me4ward
+          
+        </li>
         
         
       </ul>
+      
 
     
   </section>
   
-  <section>
+  <section data-section="experience">
+    
     <h2>Опыт работы</h2>
 
     
       
-      <div>
-        <h3>Antifraud-analyst — АО &#34;Кредит Европа Банк (Россия)&#34;</h3>
-        <p class="meta">2026-06 — н.в.</p>
+      <div class="doc-item">
+        <h3>
+          <span>Antifraud-analyst</span> —
+          <span>АО &#34;Кредит Европа Банк (Россия)&#34;</span>
+        </h3>
+        
+        <p class="meta">
+          <span>2026-06</span> —
+          <span>н.в.</span>
+        </p>
+        
         <p class="desc">Кредит Европа Банк - турецкий банк, обслуживающий физ.- и юр.-лиц множества стран. Отдел разработки средств автоматизированной борьбы с мошеннечеством занимается разработкой и поддержанием алгоритмов предотвращения мошеннеческих транзакций.
 
 - Документирование системы AS IS
 - Сбор и формализация требований от бизнес-аналитиков
 - Разработка правил и алгоритмов в системе Accelera</p>
+        
       </div>
       
-      <div>
-        <h3>SA — ПК «Аквариус»</h3>
-        <p class="meta">2025-04 — 2026-01</p>
+      <div class="doc-item">
+        <h3>
+          <span>SA</span> —
+          <span>ПК «Аквариус»</span>
+        </h3>
+        
+        <p class="meta">
+          <span>2025-04</span> —
+          <span>2026-01</span>
+        </p>
+        
         <p class="desc">Аквариус - корпорация, производящая компьютерную переферию, сетевое оборудование и прочую технику. Выкупила проект котроллера Wi-Fi у Ваймарк Системс вместе с командой разработки. Продолжал заниматься идентичными задачами до закрытия отдела.
 
 - Проводил конкурентный анализ решений гигантов индустрии (Cisco, Huawei, Qtech)
 - Анализировал и документировал результаты исследований команды R&amp;D</p>
+        
       </div>
       
-      <div>
-        <h3>SA — ООО «Ваймарк Системс»</h3>
-        <p class="meta">2024-11 — 2025-04</p>
+      <div class="doc-item">
+        <h3>
+          <span>SA</span> —
+          <span>ООО «Ваймарк Системс»</span>
+        </h3>
+        
+        <p class="meta">
+          <span>2024-11</span> —
+          <span>2025-04</span>
+        </p>
+        
         <p class="desc">Ваймарк Системс - стартап резидент Сколково, вендор контроллера корпоративных Wi-Fi сетей.
 
 - Собирал и формализовал требования от внутренних заказчиков (PO, CEO, CTO)
 - Проектировал REST-API для внутренних микросервисов контроллера
 - Ставил задачи разработке и сопровождал фичи до релиза
 - Спроектировал CLI-интерфейс контроллера</p>
+        
       </div>
       
-      <div>
-        <h3>QA — ООО «Ваймарк Системс»</h3>
-        <p class="meta">2023-05 — 2024-11</p>
+      <div class="doc-item">
+        <h3>
+          <span>QA</span> —
+          <span>ООО «Ваймарк Системс»</span>
+        </h3>
+        
+        <p class="meta">
+          <span>2023-05</span> —
+          <span>2024-11</span>
+        </p>
+        
         <p class="desc">Ваймарк Системс - стартап резидент Сколково, вендор контроллера корпоративных Wi-Fi сетей. Я занимался ручным и автоматизированным тестированием контроллера на микросервисной архитектуре и точек доступа Wi-Fi.
 
 - Был первым QA инженером в компании, выстраивал карты покрытия, сегментацию системы, ключевые риски и приоритеты
@@ -85,11 +160,20 @@
 - Увеличил покрытие тестами до ~80%
 - Тестировал документацию
 - Вел базу знаний команды, составлял инструкции и скрипты, помогал техническому писателю с написанием пользовательской документации</p>
+        
       </div>
       
-      <div>
-        <h3>AQA Engineer — ООО «Серкомм Раша»</h3>
-        <p class="meta">2021-04 — 2023-04</p>
+      <div class="doc-item">
+        <h3>
+          <span>AQA Engineer</span> —
+          <span>ООО «Серкомм Раша»</span>
+        </h3>
+        
+        <p class="meta">
+          <span>2021-04</span> —
+          <span>2023-04</span>
+        </p>
+        
         <p class="desc">Компания Серкомм Раша - российское подразделение китайской корпорации Sercomm, занималась разработкой и интеграцией домашних роутеров для таких провайдеров как Ростелеком, Билайн, МГТС, Etisalat.
 
 В мои обязанности входили разработка и поддержание системы автоматизированного тестирования на основе Robot Framework. За время работы я
@@ -98,140 +182,151 @@
 - Сократил время проведения тестов с 15 до 5 часов разработав программу-селектор тестов на основе изменений между версиями
 - Спроектировал, воплотил и интегрировал в систему подвижного робота для оценки зоны покрытия Wi-Fi
 - Участвовал в интеграции автотестов в CI/CD</p>
+        
       </div>
+      
       
 
     
   </section>
   
-  <section>
+  <section data-section="education">
+    
     <h2>Образование</h2>
 
     
-      <ul>
+      <ul class="doc-list">
         
-        <li>Гимназия №1290 —  <span class="meta">(2007-2018)</span></li>
+        <li>
+          <span>Гимназия №1290</span> —
+          <span></span>
+          <span class="meta">(<span>2007-2018</span>)</span>
+          
+        </li>
         
       </ul>
+      
 
     
   </section>
   
-  <section>
+  <section data-section="projects">
+    
     <h2>Проекты</h2>
 
     
       
-      <div class="resume-project">
-        <h3>Студия звукозаписи</h3>
-        <p class="meta">
+      <div class="resume-project" data-item="project" data-id="15">
+        <div class="doc-head">
+          <h3>МьюзАп</h3>
           
-          
-          2025-10 — 2026-07 — Other
-          
-        </p>
-        <p class="desc">Запустил студию звукозаписи в Москве, выступал в роли операционного директора. В штате было три сотрудника, студия занималась продюссированием музыки, аудиокниг и озвучки видео.</p>
-        
-        
-      </div>
-      
-      <div class="resume-project">
-        <h3>МьюзАп</h3>
+        </div>
         <p class="meta">
           
           
           2025-04 — н.в. — Other
-           · <a href="https://www.afisha.ru/concert/myuzap-shou-6038882/">https://www.afisha.ru/concert/myuzap-shou-6038882/</a>
-        </p>
+           · <a href="https://www.afisha.ru/concert/myuzap-shou-6038882/">https://www.afisha.ru/concert/myuzap-shou-6038882/</a></p>
+        
         <p class="desc">Запустил музыкальное шоу, сейчас оно проходит на ежемесячной основе и пользуется популярностью среди начинающих артистов.</p>
         
         
+        
+        
+        
       </div>
+      
+      <div class="resume-project" data-item="project" data-id="14">
+        <div class="doc-head">
+          <h3>Студия звукозаписи</h3>
+          
+        </div>
+        <p class="meta">
+          
+          
+          2025-10 — 2026-07 — Other
+          </p>
+        
+        <p class="desc">Запустил студию звукозаписи в Москве, выступал в роли операционного директора. В штате было три сотрудника, студия занималась продюссированием музыки, аудиокниг и озвучки видео.</p>
+        
+        
+        
+        
+        
+      </div>
+      
       
 
     
   </section>
   
-  <section>
+  <section data-section="certificates">
+    
     <h2>Сертификаты</h2>
 
     
-      <ul>
+      <ul class="doc-list">
         
-        <li>Введение в SQL — Stepic <span class="meta">(2024)</span></li>
+        <li>
+          <span>Введение в SQL</span> —
+          <span>Stepic</span>
+          <span class="meta">(<span>2024</span>)</span>
+          
+        </li>
         
-        <li>Введение в Go — Stepic <span class="meta">(2023)</span></li>
+        <li>
+          <span>Введение в Go</span> —
+          <span>Stepic</span>
+          <span class="meta">(<span>2023</span>)</span>
+          
+        </li>
         
       </ul>
+      
     
   </section>
   
-  <section>
+  <section data-section="skills">
+    
     <h2>Ключевые навыки</h2>
 
     
-      <ul>
+      <p class="skills-line">
         
-        <li>API-тестирование</li>
-        
-        <li>Postman</li>
-        
-        <li>Pytest</li>
-        
-        <li>Selenium</li>
-        
-        <li>Автотесты</li>
-        
-        <li>Мобильное тестирование</li>
-        
-        <li>Нагрузочное тестирование</li>
-        
-        <li>Регрессионное тестирование</li>
-        
-        <li>Тестирование</li>
-        
-        <li>BPMN</li>
-        
-        <li>UML</li>
-        
-        <li>Анализ требований</li>
-        
-        <li>Аналитика</li>
-        
-        <li>Бизнес-процессы</li>
-        
-        <li>Документация</li>
-        
-        <li>Интеграции</li>
-        
-        <li>Прототипы</li>
-        
-        <li>Спецификации</li>
-        
-        <li>Коммуникация</li>
-        
-        <li>CI/CD</li>
-        
-        <li>Docker</li>
-        
-        <li>Git</li>
-        
-        <li>JSON</li>
-        
-        <li>Jira</li>
-        
-        <li>Python</li>
-        
-        <li>REST</li>
-        
-        <li>SQL</li>
-        
-        <li>XML</li>
-        
-      </ul>
+        <span class="sk"><span>API-тестирование</span></span> • 
+        <span class="sk"><span>Postman</span></span> • 
+        <span class="sk"><span>Pytest</span></span> • 
+        <span class="sk"><span>Selenium</span></span> • 
+        <span class="sk"><span>Автотесты</span></span> • 
+        <span class="sk"><span>Мобильное тестирование</span></span> • 
+        <span class="sk"><span>Нагрузочное тестирование</span></span> • 
+        <span class="sk"><span>Регрессионное тестирование</span></span> • 
+        <span class="sk"><span>Тестирование</span></span> • 
+        <span class="sk"><span>BPMN</span></span> • 
+        <span class="sk"><span>UML</span></span> • 
+        <span class="sk"><span>Анализ требований</span></span> • 
+        <span class="sk"><span>Аналитика</span></span> • 
+        <span class="sk"><span>Бизнес-процессы</span></span> • 
+        <span class="sk"><span>Документация</span></span> • 
+        <span class="sk"><span>Интеграции</span></span> • 
+        <span class="sk"><span>Прототипы</span></span> • 
+        <span class="sk"><span>Спецификации</span></span> • 
+        <span class="sk"><span>Коммуникация</span></span> • 
+        <span class="sk"><span>CI/CD</span></span> • 
+        <span class="sk"><span>Docker</span></span> • 
+        <span class="sk"><span>Git</span></span> • 
+        <span class="sk"><span>JSON</span></span> • 
+        <span class="sk"><span>Jira</span></span> • 
+        <span class="sk"><span>Python</span></span> • 
+        <span class="sk"><span>REST</span></span> • 
+        <span class="sk"><span>SQL</span></span> • 
+        <span class="sk"><span>XML</span></span>
+      </p>
+      
 
     
   </section>
+  
+
   
 </article>
 </body></html>

@@ -1,6 +1,5 @@
 {
-  "bytes": 9738,
-  "sha256": "bd25bdf2a38b9a3997e6fcbd5ca33ac25de0840916f2eb30496b8c1cdbb4f201",
-  "source": "app /resume/export?format=html",
-  "template": "my"
+  "bytes": 13137,
+  "sha256": "cf27bf13c197e7331004d64b1858f7b22fa11e535c5b1d9279f61f192f5e1258",
+  "source": "app /resume/export?format=html"
 }
